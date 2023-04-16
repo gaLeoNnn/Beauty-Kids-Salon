@@ -1,0 +1,14 @@
+@import "./Swaiper-reviews.css";
+.reviews {
+  background-image: url("../../images/img/bg4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 823px;
+  margin-top: -390px;
+}
+.title__reviews {
+  padding-top: 100px;
+}
+.reviews__spray {
+  margin-top: -40px;
+}

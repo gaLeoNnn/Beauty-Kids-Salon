@@ -1,0 +1,23 @@
+.promo {
+  padding-top: 230px;
+  background-color: #6ecfd7;
+  height: 650px;
+}
+
+.promo__box {
+  display: flex;
+  justify-content: space-between;
+}
+.promo__text {
+  padding-left: 150px;
+  font-weight: 700;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.promo__foots {
+  display: block;
+  margin: 0 auto;
+  margin-top: -180px;
+  padding-left: 250px;
+}

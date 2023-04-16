@@ -1,0 +1,49 @@
+.swiper {
+  max-width: 1080px;
+  /* border: 1px solid #000; */
+  margin: 0 auto;
+  margin-top: 45px;
+}
+.swiper-slide {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+}
+.swiper-button-next {
+  background-image: url(../../images/img/right.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  transition: 0.5s all;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-next:hover {
+  box-shadow: 3px 3px 10px rgb(144, 98, 8);
+}
+.swiper-button-prev {
+  background-image: url(../../images/img/left.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  transition: 0.5s all;
+}
+.swiper-button-prev:hover {
+  box-shadow: 3px 3px 10px rgb(144, 98, 8);
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
