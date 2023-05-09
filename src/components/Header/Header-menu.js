@@ -1,10 +1,11 @@
 import { useState } from "react";
 import HeaderForm from "./Header-form";
 import SubMenu from "./Header-submenu";
+import { Link } from "react-router-dom";
 
 function HeaderMenu() {
   const [showMode, setShowMode] = useState(false);
-  const [showSubMenu, setShowSubMenu] = useState(false);
+  // const [showSubMenu, setShowSubMenu] = useState(false);
 
   const handlerClick = () => {
     setShowMode(!showMode);
@@ -22,28 +23,27 @@ function HeaderMenu() {
   return (
     <ul className="menu__items">
       <li className="menu__item">
-        <a href="#" className="menu__link">
+        <Link to="/" className="menu__link">
           Студия
-        </a>
+        </Link>
         {<SubMenu />}
       </li>
       <li className="menu__item">
-        <a href="" className="menu__link">
-          Услуги{" "}
-        </a>
+        <Link to="/services" className="menu__link">
+          Услуги
+        </Link>
       </li>
       <li className="menu__item">
-        <a href="" className="menu__link">
+        <Link href="" className="menu__link">
           Акции
-        </a>
+        </Link>
       </li>
       <li className="menu__item">
-        <a href="" className="menu__link">
+        <Link to="/catalog" className="menu__link">
           Каталог причесок
-        </a>
+        </Link>
       </li>
       <button className="btn" onClick={handlerClick}>
-        {" "}
         Записаться
       </button>
       {content}

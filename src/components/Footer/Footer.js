@@ -4,7 +4,7 @@ import inst from "../../images/icons/inst.svg";
 import endText from "../../images/img/footer-text.svg";
 import phone from "../../images/icons/ws.svg";
 import Studio from "./Footer-studio";
-import Services from "./Footer-services";
+import FooterServices from "./Footer-services";
 import Adress from "./Footer-adress";
 
 function Footer() {
@@ -20,7 +20,7 @@ function Footer() {
             </div>
             <div className="footer__icon">
               <div className="footer__title">Услуги</div>
-              <Services />
+              <FooterServices />
             </div>
             <div className="footer__icon">
               <div className="footer__title">Адресс</div>

@@ -1,4 +1,4 @@
-function Services() {
+function FooterServices() {
   return (
     <ul className="footer-menu">
       <li className="footer-menu__list">
@@ -39,4 +39,4 @@ function Services() {
     </ul>
   );
 }
-export default Services;
+export default FooterServices;

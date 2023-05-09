@@ -1,0 +1,25 @@
+.catalog {
+  background-color: #d3b5da;
+  padding-top: 170px;
+  min-height: 2072px;
+}
+.catalog__box {
+  display: flex;
+}
+
+.catalog__text {
+  margin: 0;
+  margin-left: 30px;
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  width: 297px;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 64px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.catalog__foots {
+  margin-left: 45px;
+  padding: 0;
+}

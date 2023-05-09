@@ -7,6 +7,7 @@ export const FOOTS2 = require("./img/foots3.png");
 export const FOOTS3 = require("./img/foots4.png");
 export const CREAM = require("./img/spray.png");
 export const BLONDE = require("./img/blonde.png");
+export const FOOTS4 = require("./img/foots_ctlg.png");
 export const HEART = (
   <svg
     width="55"
