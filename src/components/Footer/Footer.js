@@ -7,12 +7,16 @@ import Studio from "./Footer-studio";
 import FooterServices from "./Footer-services";
 import Adress from "./Footer-adress";
 
-function Footer() {
+function Footer({ color, image, colorFooter }) {
+  // const colored = color.orange;
+  // const darkOrange = color.darkorange;
+  const logo = image ? image : logoFooter;
+
   return (
-    <footer>
+    <footer style={{ backgroundColor: color }}>
       <div className="footer__container">
         <div className="footer__box">
-          <img className="logo-footer" src={logoFooter} alt="" />
+          <img className="logo-footer" src={logo} alt="" />
           <div className="footer__icons">
             <div className="footer__icon">
               <div className="footer__title">Студия</div>
@@ -37,7 +41,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer__bg">
+      <div className="footer__bg" style={{ backgroundColor: colorFooter }}>
         <img src={endText} alt="" />
       </div>
     </footer>

@@ -1,0 +1,52 @@
+.feedback {
+  padding-top: 200px;
+  background-color: #f59e0b;
+  min-height: 1000px;
+}
+.feedback__title {
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+.feedback__text {
+  margin-top: 20px;
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 400px;
+}
+.feedback__from {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.feed-form__name_m {
+  display: block;
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.field__text {
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}

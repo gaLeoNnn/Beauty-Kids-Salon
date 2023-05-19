@@ -4,17 +4,23 @@ body {
 .header {
   position: fixed;
   width: 100%;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
   top: 0;
   z-index: 5;
   background-color: #ffffff;
 }
 .header .header__box {
+  width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1440px;
   margin: 0 auto;
   padding: 0 10px;
+}
+.menu {
+  display: flex;
 }
 .menu__items {
   display: flex;
@@ -54,6 +60,13 @@ body {
 .menu__link:hover::after {
   width: 100%;
 }
+.menu__link_active:after {
+  width: 100%;
+}
+.active {
+  color: red;
+}
+
 .btn {
   margin-right: 0;
   border: 1px solid #000;
@@ -117,4 +130,6 @@ li:hover #submenu {
 }
 .submenu__link:hover {
   color: #ca6b1b;
+}
+.active {
 }

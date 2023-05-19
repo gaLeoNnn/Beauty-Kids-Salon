@@ -2,11 +2,15 @@ import Promo from "../Promo/Promo";
 import Advantage from "../Advantages/Advantage";
 import Children from "../Children/Children";
 import Reviews from "../Reviews/Reviews";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Registration from "../Registration/Registration";
 import Footer from "../Footer/Footer";
 
 export default function Main() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [reviews, setReviews] = useState([
     {
       id: 0,

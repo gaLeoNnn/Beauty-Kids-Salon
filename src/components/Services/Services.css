@@ -2,5 +2,48 @@
   background-color: #f4ad54;
   padding-top: 170px;
   min-height: 2072px;
-  border: 1px solid #000;
+}
+.services__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services__img {
+  height: 140px;
+}
+.services__definition {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.services__text {
+  display: inline-block;
+  margin: 0;
+  margin-left: 30px;
+  width: 234px;
+  font-family: "Lilita One Rus";
+  font-size: 64px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.services__foots {
+  margin-top: -50px;
+}
+.services__content {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+}
+.services__order {
+  background-image: url("../../images/img/services-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1200px;
+  margin-top: -350px;
+}
+.services__footprint {
+  display: block;
+  margin: 0 auto;
 }

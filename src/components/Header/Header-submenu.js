@@ -1,30 +1,32 @@
+import { Link } from "react-router-dom";
+
 function SubMenu() {
   return (
     <ul id="submenu" className="submenu">
       <li className="submenu__item">
-        <a href="" className="submenu__link">
+        <Link to="#" className="submenu__link">
           О нас
-        </a>
+        </Link>
       </li>
       <li className="submenu__item">
-        <a href="" className="submenu__link">
+        <Link href="" className="submenu__link">
           Первая стрижка
-        </a>
+        </Link>
       </li>
       <li className="submenu__item">
-        <a href="" className="submenu__link">
+        <Link href="" className="submenu__link">
           Прокалывание мочек ушей
-        </a>
+        </Link>
       </li>
       <li className="submenu__item">
-        <a href="" className="submenu__link">
+        <Link to={"/feedback"} className="submenu__link">
           Отзывы
-        </a>
+        </Link>
       </li>
       <li className="submenu__item">
-        <a href="" className="submenu__link">
+        <Link href="" className="submenu__link">
           Вакансии
-        </a>
+        </Link>
       </li>
     </ul>
   );
