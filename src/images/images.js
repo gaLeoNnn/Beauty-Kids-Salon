@@ -9,6 +9,7 @@ export const CREAM = require("./img/spray.png");
 export const BLONDE = require("./img/blonde.png");
 export const FOOTS4 = require("./img/foots_ctlg.png");
 export const FOOTS5 = require("./img/foots_services.png");
+export const FOOTS6 = require("./img/catalog_foots.png");
 export const PIERCING = require("./img/piercing.jpeg");
 export const MODEL = require("./img/model.jpg");
 export const MODEL2 = require("./img/model2.jpg");
@@ -16,6 +17,7 @@ export const MODEL3 = require("./img/model3.png");
 export const MODEL4 = require("./img/model4.jpg");
 export const MODEL5 = require("./img/model5.jpeg");
 export const MODEL6 = require("./img/model6.jpeg");
+
 export const HEART = (
   <svg
     width="55"

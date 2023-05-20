@@ -117,7 +117,6 @@ export const Services = () => {
               <img src={sprayer} alt="" />
             </div>
           </div>
-
           <div className="services__content">
             {piers.map((item) => {
               return <Tabs piers={item} list={item.list} key={item.id} />;
@@ -125,12 +124,11 @@ export const Services = () => {
           </div>
           <img src={footprint} className="services__footprint" alt="" />
         </div>
-
         <div className="services__order">
           <div className="container">
             <img className="services__dryer" src={DRYER} alt="" />
-            <div className="services__box">
-              <div className="services__logo">
+            <div className="services__item">
+              <div className="services__pic">
                 <img src={YOZH} alt="" />
                 <div className="services__text">
                   Стало Интересно? Запишитесь прямо сейчас!

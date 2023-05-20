@@ -1,7 +1,7 @@
 .catalog {
   background-color: #d3b5da;
   padding-top: 170px;
-  min-height: 2072px;
+  min-height: 1200px;
 }
 .catalog__box {
   display: flex;
@@ -32,6 +32,7 @@
   font-weight: 400;
   font-size: 26px;
   color: #ffffff;
+  margin-top: 0;
   margin-bottom: 40px;
 }
 .catalog__tab {
@@ -47,4 +48,30 @@
 }
 .catalog__tab_active {
   background-color: #a855f7;
+}
+.catalog__footsbottom {
+  display: block;
+
+  margin: 0 auto;
+}
+.catalog__order {
+  background-image: url("../../images/img/catalog_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 1000px;
+  margin-top: -300px;
+}
+.catalog__item {
+  padding-top: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.catalog__pic {
+  padding-top: 50px;
+  display: flex;
+}
+.catalog__pic img {
+  width: 195px;
+  height: 195px;
+  margin-right: 20px;
 }

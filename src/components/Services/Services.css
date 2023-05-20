@@ -7,7 +7,24 @@
   display: flex;
   justify-content: space-between;
 }
+.services__item {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.services__pic {
+  display: flex;
+  padding-top: 50px;
+}
 
+.services__pic img {
+  width: 195px;
+  height: 195px;
+  margin-right: 20px;
+}
+.services__dryer {
+  margin-top: -85px;
+}
 .services__img {
   height: 140px;
 }
@@ -41,7 +58,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 1200px;
-  margin-top: -350px;
+  margin-top: -320px;
 }
 .services__footprint {
   display: block;

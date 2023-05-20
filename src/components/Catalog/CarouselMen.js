@@ -4,14 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 
-import img_1 from "./foto/1.png";
-import img_2 from "./foto/2.png";
-import img_3 from "./foto/3.png";
-import img_4 from "./foto/4.png";
-import img_5 from "./foto/5.png";
-import img_6 from "./foto/6.png";
+import img_1 from "./fotomen/1.png";
+import img_2 from "./fotomen/2.jpg";
+import img_3 from "./fotomen/3.jpg";
+import img_4 from "./fotomen/4.jpg";
+import img_5 from "./fotomen/5.jpeg";
+import img_6 from "./fotomen/6.jpeg";
 
-export const Carousel = () => {
+export const Carouselmen = () => {
   const [mainImage, setMainImage] = useState({
     id: 1,
     src: img_1,

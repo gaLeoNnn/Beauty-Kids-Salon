@@ -1,3 +1,9 @@
+.carousel {
+  margin-bottom: 50px;
+}
+.Carouselmen {
+  margin-bottom: 50px;
+}
 .slider__item {
   max-width: 1100px;
   display: flex;
