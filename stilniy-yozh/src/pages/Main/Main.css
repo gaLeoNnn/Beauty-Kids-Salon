@@ -1,0 +1,113 @@
+.advantage {
+  background-image: url("../../images/img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 880px;
+  margin-top: -200px;
+}
+.advantage__relative {
+  position: relative;
+  height: 110px;
+}
+.advantage__dryer {
+  position: absolute;
+  top: -150px;
+}
+.title {
+  /* text-align: center; */
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.advantage__box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.advantage__item {
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+.advantage__item-title {
+  font-family: "Lilita One Rus";
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 44px;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.advantage__item-text {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+.promo__foots2 {
+  display: block;
+  margin: 0 auto;
+  z-index: 10;
+}
+.promo {
+  padding-top: 230px;
+  background-color: #6ecfd7;
+  height: 650px;
+}
+
+.promo__box {
+  display: flex;
+  justify-content: space-between;
+}
+.promo__text {
+  padding-left: 150px;
+  font-weight: 700;
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.promo__foots {
+  display: block;
+  margin: 0 auto;
+  margin-top: -180px;
+  padding-left: 250px;
+}
+.registration {
+  background-image: url("../../images/img/bg5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  min-height: 942px;
+  margin-top: -100px;
+}
+.registration__hair {
+  margin-top: -80px;
+}
+.registration__box {
+  display: flex;
+  justify-content: space-between;
+}
+.registration__logo {
+  padding-top: 50px;
+  display: flex;
+}
+.registration__logo img {
+  width: 195px;
+  height: 195px;
+  margin-right: 20px;
+}
+.registration__text {
+  font-family: "Lilita One Rus";
+  font-weight: 400;
+  font-size: 56px;
+  width: 410px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
