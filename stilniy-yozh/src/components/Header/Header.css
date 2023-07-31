@@ -138,3 +138,18 @@ body {
   height: 200px;
   width: 100px;
 }
+
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  width: 100%;
+  min-height: 100vh;
+  transition: 0.6s all;
+}
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+}

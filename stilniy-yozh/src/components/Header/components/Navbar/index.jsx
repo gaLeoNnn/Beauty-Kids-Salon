@@ -1,12 +1,14 @@
 import { useState } from "react";
 import SubMenu from "../SubMenu";
 import { Link } from "react-router-dom";
-import Form from "../Form";
 
-const HeaderMenu = () => {
-  const [showMode, setShowMode] = useState(false);
+const HeaderMenu = ({ handleClick }) => {
   const [activeCategory, setActiveCategory] = useState("/");
+
   const [submenu, setSubmenu] = useState(false);
+  const handleBtnClick = () => {
+    handleClick();
+  };
 
   const navMenu = [
     { id: 0, name: "Студия", link: "/" },
@@ -23,23 +25,8 @@ const HeaderMenu = () => {
   const onMouseLeave = () => setSubmenu(false);
 
   const handleCategoryClick = (name) => {
-    console.log(name);
     setActiveCategory(name);
   };
-
-  const handlerClick = () => {
-    setShowMode(!showMode);
-  };
-
-  let content = null;
-
-  if (showMode) {
-    content = (
-      <>
-        <Form />
-      </>
-    );
-  }
 
   return (
     <>
@@ -62,10 +49,9 @@ const HeaderMenu = () => {
             </li>
           ))}
         </ul>
-        <button className="btn" onClick={handlerClick}>
+        <button className="btn" onClick={handleBtnClick}>
           Записаться
         </button>
-        {content}
       </nav>
     </>
   );

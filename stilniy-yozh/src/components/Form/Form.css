@@ -5,16 +5,7 @@
   background: #ffffff;
   border-radius: 30px;
 }
-.feed-form__modal {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 30px;
-  bottom: -550px;
-  right: 100px;
-}
+
 input {
   width: 340px;
   height: 32px;
@@ -61,16 +52,19 @@ label {
   justify-content: space-between;
   color: #828282;
 }
+.date-box__item {
+  margin-right: 10px;
+  width: 150px;
+}
+
 .date-box__time {
-  display: block;
-  padding: 0 10px;
-  width: 160px;
+  box-sizing: border-box;
+  width: 150px;
   height: 32px;
 }
 .date-box__date {
-  display: block;
-  padding: 0 10px;
-  width: 160px;
+  box-sizing: border-box;
+  width: 150px;
   height: 32px;
   color: #828282;
 }
@@ -116,4 +110,16 @@ span {
   font-weight: 700;
   font-size: 15px;
   color: #ffffff;
+}
+
+label {
+  font-family: "Lato";
+  display: block;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: #262626;
+  margin: 0;
 }

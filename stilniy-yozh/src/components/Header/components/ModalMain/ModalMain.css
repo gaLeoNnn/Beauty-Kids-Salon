@@ -1,0 +1,21 @@
+.modal-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  min-height: 490px;
+  border-radius: 30px;
+}
+
+.modal-main__close {
+  position: absolute;
+  font-size: 40px;
+  cursor: pointer;
+  color: #c78957;
+  top: 0;
+  right: 20px;
+}
+.modal-main__close:hover {
+  color: #ca6b1b;
+}
