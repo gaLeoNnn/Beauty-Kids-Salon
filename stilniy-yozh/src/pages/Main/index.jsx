@@ -62,43 +62,34 @@ const Main = () => {
           <div className="advantage__box">
             <div className="advantage__item">
               {SvgImporter.HEART}
-              <div className="advantage__item-title">
-                Парикмахеры не кусаются
-              </div>
+              <div className="advantage__item-title">Парикмахеры не кусаются</div>
               <div className="advantage__item-text">
-                {" "}
-                Обязательная часть подготовки наших мастеров - психологические
-                курсы, после которых они умеют находить подход ко всем деткам,
-                даже к самым маленьким и непоседливым{" "}
+                Обязательная часть подготовки наших мастеров - психологические курсы, после которых они умеют находить
+                подход ко всем деткам, даже к самым маленьким и непоседливым{" "}
               </div>
             </div>
             <div className="advantage__item">
               {SvgImporter.DIMOND}
               <div className="advantage__item-title">Чистота и уют</div>
               <div className="advantage__item-text">
-                Оборудование в Стильном Еже собственного производства, абсолютно
-                не трамоопасное. А инструменты постоянно дезенфицируются и
-                стерелизуются.
+                Оборудование в Стильном Еже собственного производства, абсолютно не трамоопасное. А инструменты
+                постоянно дезенфицируются и стерелизуются.
               </div>
             </div>
             <div className="advantage__item">
               {SvgImporter.GIFT}
-              <div className="advantage__item-title">
-                Детки играют вместо того, чтобы плакать
-              </div>
+              <div className="advantage__item-title">Детки играют вместо того, чтобы плакать</div>
               <div className="advantage__item-text">
-                В нашей студии море игрушек,вместо кресел-машинки, вместо зеркал
-                телевизоры. Дети хоят в Стильный Еж как на праздник и даже не
-                замечают, что их стригут
+                В нашей студии море игрушек,вместо кресел-машинки, вместо зеркал телевизоры. Дети хоят в Стильный Еж как
+                на праздник и даже не замечают, что их стригут
               </div>
             </div>
             <div className="advantage__item">
               {SvgImporter.FLESH}
               <div className="advantage__item-title">Чистота и уют</div>
               <div className="advantage__item-text">
-                Оборудование в Стильном Еже собственного производства, абсолютно
-                не трамоопасное. А инструменты постоянно дезенфицируются и
-                стерелизуются.
+                Оборудование в Стильном Еже собственного производства, абсолютно не трамоопасное. А инструменты
+                постоянно дезенфицируются и стерелизуются.
               </div>
             </div>
           </div>
@@ -113,9 +104,7 @@ const Main = () => {
           <div className="registration__box">
             <div className="registration__logo">
               <ImgLoader name={"HEAD"} />
-              <div className="registration__text">
-                Стало Интересно? Запишитесь прямо сейчас!
-              </div>
+              <div className="registration__text">Стало Интересно? Запишитесь прямо сейчас!</div>
             </div>
             <Form />
           </div>

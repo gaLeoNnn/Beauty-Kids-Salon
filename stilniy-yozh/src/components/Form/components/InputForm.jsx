@@ -1,14 +1,22 @@
+import TextField from "@mui/material/TextField";
+
 function InputForm(props) {
+  // const classes = useStyles();
+
   return (
     <>
       <label className="feed-form__name">{props.label}</label>
-      <input
+
+      <TextField
         type={props.type}
         placeholder={props.placeholder}
         id={props.id}
         name={props.name}
-        className={`${props.className ? props.className : ""}`}
-      />
+        size="small"
+        sx={{ marginBottom: "20px", height: "34px" }}
+      >
+        {" "}
+      </TextField>
     </>
   );
 }

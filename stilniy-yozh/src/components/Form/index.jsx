@@ -1,16 +1,13 @@
+import { useState } from "react";
 import "./Form.css";
 import InputForm from "./components/InputForm";
+import BasicSelect from "./components/BasicSelect";
 
 function Form() {
-  const services = [
-    { id: 1, value: "Стрижка для мальчика" },
-    { id: 2, value: "Стрижка для девочки" },
-    { id: 3, value: "Бритье под ноль" },
-    { id: 4, value: "Стрижка челки для девочки" },
-    { id: 5, value: "Прокалывание мочек ушей Inverness" },
-    { id: 6, value: "Брейды с канекалоном/без канекалона" },
-    { id: 7, value: "3Д косы с канекалоном" },
-  ];
+  const [date, setDate] = useState(new Date());
+  const onChange = (date) => {
+    setDate(date);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,13 +29,14 @@ function Form() {
       <InputForm
         label="Телефон"
         placeholder="Телефон"
-        type="tel"
+        type="number"
         id="phone"
         name="phone"
       />
+      <label>Выберите услугу</label>
+      <BasicSelect />
 
-      <label>Выберите Услугу</label>
-      <select
+      {/* <select
         className="feed-form__services"
         name="service"
         id="service"
@@ -49,28 +47,29 @@ function Form() {
             {item.value}
           </option>
         ))}
-      </select>
+      </select> */}
 
       <div className="date-box">
         <div className="date-box__item">
-          <InputForm
+          {/* <InputForm
             label="Укажите время записи"
             type="time"
             id="time"
             name="time"
             className="date-box__time"
-          />
+          /> */}
         </div>
         <div className="date-box__item">
-          <InputForm
+          {/* <InputForm
             label="Выберите дату записи"
             type="date"
             id="date"
             name="date"
             className="date-box__date"
-          />
+          /> */}
         </div>
       </div>
+
       <textarea
         className="feed-form__area"
         name="textField"

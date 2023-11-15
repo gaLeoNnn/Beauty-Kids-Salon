@@ -5,6 +5,9 @@
   background: #ffffff;
   border-radius: 30px;
 }
+.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+  color: #ca6b1b;
+}
 
 input {
   width: 340px;
@@ -27,15 +30,7 @@ input {
   margin-bottom: 25px;
   color: #ca6b1b;
 }
-label {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 14px;
-  color: #262626;
-  margin: 0;
-}
+
 .feed-form__services {
   width: 362px;
   height: 34px;
@@ -118,8 +113,8 @@ label {
   text-align: left;
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
-  color: #262626;
-  margin: 0;
+  color: #686161;
+  margin-bottom: 4px;
 }

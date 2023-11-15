@@ -8,11 +8,13 @@ const Header = () => {
   const [showMode, setShowMode] = useState(false);
   const handleClick = () => setShowMode(!showMode);
 
-  // if (showMode) {
-  //   document.body.style.overflow = "hidden";
-  // } else {
-  //   document.body.style.overflow = "";
-  // }
+  if (showMode) {
+    document.body.style.overflow = "hidden";
+    document.body.style.paddingRight = "15px";
+  } else {
+    document.body.style.overflow = "";
+    document.body.style.paddingRight = "";
+  }
 
   return (
     <>

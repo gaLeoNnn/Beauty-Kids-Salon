@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SubMenu from "../SubMenu";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const HeaderMenu = ({ handleClick }) => {
   const [activeCategory, setActiveCategory] = useState("/");
@@ -17,14 +17,14 @@ const HeaderMenu = ({ handleClick }) => {
     { id: 3, name: "Каталог причесок", link: "/catalog" },
   ];
 
-  const onMouseEnter = (id) => {
+  const onMouseEnter = id => {
     if (id === 0) {
       setSubmenu(!submenu);
     }
   };
   const onMouseLeave = () => setSubmenu(false);
 
-  const handleCategoryClick = (name) => {
+  const handleCategoryClick = name => {
     setActiveCategory(name);
   };
 
@@ -32,20 +32,19 @@ const HeaderMenu = ({ handleClick }) => {
     <>
       <nav className="menu">
         <ul className="menu__items">
-          {navMenu.map((item) => (
+          {navMenu.map(item => (
             <li className="menu__item" key={item.id}>
-              <Link
+              <NavLink
                 onClick={() => handleCategoryClick(item.name)}
                 onMouseEnter={() => onMouseEnter(item.id)}
                 onMouseLeave={onMouseLeave}
                 to={item.link}
-                className={`menu__link ${
-                  activeCategory === item.name ? "menu__link_active" : null
-                }`}
+                className="menu__link"
+                // className={({ isActive }) => (isActive ? "menu__link_active" : "")}
               >
                 {item.name}
                 {submenu && item.id === 0 && <SubMenu />}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
