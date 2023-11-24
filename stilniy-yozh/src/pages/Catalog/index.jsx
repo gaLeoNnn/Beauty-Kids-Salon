@@ -24,7 +24,7 @@ const Catalog = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [smallImages, setSmallImages] = useState([
+  const [photosGirl, setPhotosGirl] = useState([
     { id: 1, src: img_1 },
     { id: 2, src: img_2 },
     { id: 3, src: img_3 },
@@ -32,7 +32,7 @@ const Catalog = () => {
     { id: 5, src: img_5 },
     { id: 6, src: img_6 },
   ]);
-  const [smallImagesMen, setSmallImagesMen] = useState([
+  const [photosMen, setPhotosMen] = useState([
     { id: 1, src: img1 },
     { id: 2, src: img2 },
     { id: 3, src: img3 },
@@ -75,9 +75,9 @@ const Catalog = () => {
             </li>
           </ul>
           {gender === "Girl" ? (
-            <Carousel smallImages={smallImages} style={{ marginBottom: "50px" }} />
+            <Carousel photos={photosGirl} style={{ marginBottom: "50px" }} />
           ) : gender === "Men" ? (
-            <Carousel smallImages={smallImagesMen} style={{ marginBottom: "50px" }} />
+            <Carousel photos={photosMen} style={{ marginBottom: "50px" }} />
           ) : null}
           <ImgLoader name={"FOOTS6"} classNames="catalog__footsbottom" />
         </div>

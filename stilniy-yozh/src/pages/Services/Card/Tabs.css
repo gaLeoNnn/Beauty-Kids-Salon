@@ -1,0 +1,331 @@
+.tabs__item {
+  width: 270px;
+  min-height: 500px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tabs__item:hover {
+  background-color: #ede6e6;
+}
+
+.tabs__subbox {
+  margin-top: 10px;
+  min-height: 200px;
+}
+.tabs__img-box {
+  overflow: hidden;
+  height: 250px;
+}
+
+.tabs__subtitle {
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  text-align: center;
+  font-size: 25px;
+  color: #52525b;
+  margin-bottom: 15px;
+}
+.tabs__descr {
+  width: 250px;
+  margin: 0 auto;
+  color: #52525b;
+  font-size: 17px;
+}
+
+hr {
+  border: 1px solid #a1a1aa;
+  border-bottom: 0px;
+}
+
+.tabs__footer {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.tabs__prices {
+  color: #52525b;
+  font-weight: 700;
+  text-align: center;
+}
+
+.tabs__wrapper {
+  display: flex;
+
+  width: 200%;
+}
+.tabs__content {
+  width: 50%;
+  transform: translateX(-100%);
+  transition: 0.5s all;
+}
+.tabs__content_active {
+  transform: translateX(0%);
+}
+
+.tabs-change {
+  width: 50%;
+  transform: translate(0%);
+  transition: 0.5s all;
+}
+
+.tabs-change_active {
+  transform: translateX(-100%);
+}
+.tabs-change__img {
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+}
+.tabs-change__title {
+  margin-top: 20px;
+  font-family: "Lilita One Rus";
+  font-style: normal;
+  text-align: center;
+  font-size: 25px;
+  color: #52525b;
+  margin-bottom: 15px;
+}
+.tabs-change__list {
+  margin-bottom: 10px;
+}
+
+:root {
+  --card-width: 300px;
+  --card-big-image-width: 200px;
+  --fade-in-animation: fade-in 400ms linear;
+  --fade-out-animation: fade-out 200ms linear;
+  --scale-in-animation: scale-in 400ms linear;
+  --scale-out-animation: scale-out 200ms linear;
+}
+
+.services__content.has-active {
+  width: calc(100px + 4 * var(--card-width) + 3 * 20px);
+  /* active card addition & 4 cards & 3 gaps */
+}
+
+.card__container {
+  border: 1px solid #cbcbcb;
+  background-color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 430px;
+  position: relative;
+}
+
+.card__container.card_container_deactive {
+  animation: card-deactivate 300ms linear;
+  animation-fill-mode: forwards;
+}
+
+.card__container.card_container_active {
+  display: flex;
+  animation: card-activate 300ms linear;
+  animation-fill-mode: forwards;
+}
+
+.card__img {
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__image_small {
+  border: none;
+  border-radius: 10px;
+  height: 200px;
+  width: var(--card-width);
+  animation: var(--scale-in-animation);
+  animation-fill-mode: forwards;
+}
+
+.card__container.card_container_active .card__image_small {
+  animation: var(--scale-out-animation);
+  animation-fill-mode: forwards;
+}
+
+.card__container .card__image_big {
+  animation: var(--scale-out-animation);
+  animation-fill-mode: forwards;
+}
+
+.card__container.card_container_active .card__image_big {
+  animation: var(--scale-in-animation);
+  animation-fill-mode: forwards;
+  border-radius: 10px;
+  height: 300px;
+  width: var(--card-big-image-width);
+}
+
+.card__container h3 {
+  text-align: center;
+}
+
+.card__text-content {
+  width: var(--card-width);
+}
+
+/* .card__container.card_container_active .card__text-content {
+  width: calc(100% - var(--card-big-image-width));
+} */
+
+.card__summary {
+  padding: 0 16px;
+  border: 1px solid #000;
+}
+
+.card__description {
+  animation: var(--fade-out-animation);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card__container.card_container_active .card__summary {
+  animation: var(--fade-out-animation);
+  animation-fill-mode: forwards;
+}
+
+.card__container.card_container_active .card__description {
+  padding: 0 16px;
+  animation: var(--fade-in-animation);
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.card__container .price-options__container {
+  border-top: 1px solid #cbcbcb;
+  bottom: 0;
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  left: 0;
+  margin: 0 16px;
+  padding: 10px 0;
+  position: absolute;
+  right: 0;
+}
+
+.card__container .price-options__container .price-options {
+  font-size: 0.8em;
+  padding: 0;
+}
+
+.card__container .price-options li {
+  list-style-type: none;
+}
+
+.btn_card {
+  display: none;
+  opacity: 0;
+  background: #c6b4eb;
+  animation: var(--scale-out-animation);
+  animation-fill-mode: forwards;
+}
+
+.card__container.card_container_active .btn_card {
+  display: block;
+  opacity: 1;
+  height: 45px;
+  margin: 10px 0 0 16px;
+  padding: 8px 16px;
+  animation: bounceIn 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 normal backwards;
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  70% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes card-activate {
+  0% {
+    width: var(--card-width);
+  }
+  100% {
+    border: 1px solid #000;
+    width: calc(var(--card-width) + 200px);
+  }
+}
+
+@keyframes card-deactivate {
+  0% {
+    width: calc(var(--card-width) + 200px);
+  }
+
+  100% {
+    width: var(--card-width);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  99% {
+    display: block;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    display: none;
+    scale: 0;
+  }
+  50% {
+    display: block;
+  }
+  100% {
+    display: block;
+    scale: 1;
+  }
+}
+@keyframes scale-out {
+  0% {
+    display: block;
+    scale: 1;
+  }
+  50% {
+    display: block;
+  }
+  100% {
+    display: none;
+    scale: 0;
+  }
+}

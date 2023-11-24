@@ -1,12 +1,17 @@
 import Form from "../../components/Form";
 import "./Services.css";
-import { useEffect } from "react";
-import { Tabs } from "./Tabs";
+import { useEffect, useState } from "react";
+// import { Tabs } from "./Card";
 import Footer from "../../components/Footer";
 import { piers } from "../../components/Piers";
 import { ImgLoader } from "../../images/ImgLoader";
+import { getCardData } from "../../components/Piers";
+import classNames from "classnames";
+import Card from "./Card";
 
 const Services = () => {
+  const [selectedCardId, setSelectCard] = useState();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,8 +25,7 @@ const Services = () => {
               <ImgLoader classNames="services__img" name={"servicesLogo"} />
               <h2 className="services__text">Наши Услуги</h2>
               <div className="services__definition">
-                На все услуги студии действует гарантия качества. Детский
-                прайскурант действует до 14 лет включительно.
+                На все услуги студии действует гарантия качества. Детский прайскурант действует до 14 лет включительно.
               </div>
             </div>
             <div className="services__foots">
@@ -31,11 +35,22 @@ const Services = () => {
               <ImgLoader name={"sprayer"} />
             </div>
           </div>
-          <div className="services__content">
-            {piers.map((item) => (
+          <div
+            className={classNames("services__content", {
+              "has-active": selectedCardId > 0,
+            })}
+          >
+            {getCardData()
+              .map(item => ({ ...item, selectedCardId, setSelectCard }))
+              .map(enrichedItem => (
+                <Card {...enrichedItem} />
+              ))}
+          </div>
+          {/* <div className="services__content">
+            {piers.map(item => (
               <Tabs piers={item} list={item.list} key={item.id} />
             ))}
-          </div>
+          </div> */}
           <ImgLoader name={"footprint"} classNames="services__footprint" />
         </div>
         <div className="services__order">
@@ -44,19 +59,13 @@ const Services = () => {
             <div className="services__item">
               <div className="services__pic">
                 <ImgLoader name={"YOZH"} />
-                <div className="services__text">
-                  Стало Интересно? Запишитесь прямо сейчас!
-                </div>
+                <div className="services__text">Стало Интересно? Запишитесь прямо сейчас!</div>
               </div>
               <Form />
             </div>
           </div>
         </div>
-        <Footer
-          color={"#F4AD54"}
-          colorFooter={"#E5922A"}
-          image={"footerlogo"}
-        />
+        <Footer color={"#F4AD54"} colorFooter={"#E5922A"} image={"footerlogo"} />
       </section>
     </>
   );

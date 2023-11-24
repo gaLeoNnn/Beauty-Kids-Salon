@@ -5,11 +5,25 @@ import BasicSelect from "./components/BasicSelect";
 
 function Form() {
   const [date, setDate] = useState(new Date());
-  const onChange = (date) => {
-    setDate(date);
+  const [childName, setChildName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [textField, setTextField] = useState("");
+  const [selectedService, setSelectedService] = useState("");
+
+  const onChangeService = event => {
+    setSelectedService(event.target.value);
+  };
+  const onChangeName = e => {
+    setChildName(e.target.value);
+  };
+  const onChangePhone = e => {
+    setPhone(e.target.value);
+  };
+  const onChangeField = e => {
+    setTextField(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     const data = new FormData(e.target);
     console.log(Object.fromEntries(data));
@@ -19,6 +33,8 @@ function Form() {
     <form onSubmit={handleSubmit} className="feed-form">
       <div className="feed-form__text">Записаться онлайн</div>
       <InputForm
+        onChange={onChangeName}
+        value={childName}
         label="Имя ребенка"
         placeholder="Имя"
         type="text"
@@ -27,28 +43,16 @@ function Form() {
       />
 
       <InputForm
+        onChange={onChangePhone}
+        value={phone}
         label="Телефон"
         placeholder="Телефон"
-        type="number"
+        type="tel"
         id="phone"
         name="phone"
       />
       <label>Выберите услугу</label>
-      <BasicSelect />
-
-      {/* <select
-        className="feed-form__services"
-        name="service"
-        id="service"
-        placeholder="Выберите"
-      >
-        {services.map((item) => (
-          <option key={item.id} value={item.value}>
-            {item.value}
-          </option>
-        ))}
-      </select> */}
-
+      <BasicSelect onChange={onChangeService} value={selectedService} />
       <div className="date-box">
         <div className="date-box__item">
           {/* <InputForm
@@ -71,6 +75,8 @@ function Form() {
       </div>
 
       <textarea
+        onChange={onChangeField}
+        value={textField}
         className="feed-form__area"
         name="textField"
         id="feed-form__area"
@@ -80,8 +86,7 @@ function Form() {
       ></textarea>
       <div className="feed-form__footer">
         <div className="feed-form__prof">
-          Подтверждаю свое согласие на <span>обработку</span> персональных
-          данных
+          Подтверждаю свое согласие на <span>обработку</span> персональных данных
         </div>
         <button className="feed-form__btn">Отправить</button>
       </div>

@@ -5,14 +5,15 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 import { useEffect } from "react";
 
-export const Carousel = ({ smallImages }) => {
+export const Carousel = ({ photos }) => {
   const [mainImage, setMainImage] = useState({
     id: 1,
-    src: smallImages[0].src,
+    src: photos[0].src,
   });
+
   useEffect(() => {
-    setMainImage({ ...mainImage, src: smallImages[0].src });
-  }, [smallImages]);
+    setMainImage({ ...mainImage, src: photos[0].src });
+  }, [photos]);
 
   const handleClick = item => {
     setMainImage(item);
@@ -25,7 +26,7 @@ export const Carousel = ({ smallImages }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     afterChange: () => {
-      setMainImage(smallImages[0]);
+      setMainImage(photos[0]);
     },
   };
 
@@ -34,13 +35,13 @@ export const Carousel = ({ smallImages }) => {
       id: 1,
       imgMain: mainImage.src,
       styles: { width: "400px", height: "400px", borderRadius: "10%" },
-      imgSmall: smallImages.map(item => (
+      imgSmall: photos.map(item => (
         <img
           key={item.id}
           src={item.src}
           style={{ width: "190px", height: "190px" }}
           onClick={() => handleClick(item)}
-          alt=""
+          alt="photos"
         />
       )),
     },
@@ -48,69 +49,13 @@ export const Carousel = ({ smallImages }) => {
       id: 2,
       imgMain: mainImage.src,
       styles: { width: "400px", height: "400px", borderRadius: "10%" },
-      imgSmall: smallImages.map(item => (
+      imgSmall: photos.map(item => (
         <img
           key={item.id}
           src={item.src}
           style={{ width: "190px", height: "190px" }}
           onClick={() => handleClick(item)}
-          alt=""
-        />
-      )),
-    },
-    {
-      id: 3,
-      imgMain: mainImage.src,
-      styles: { width: "400px", height: "400px", borderRadius: "10%" },
-      imgSmall: smallImages.map(item => (
-        <img
-          key={item.id}
-          src={item.src}
-          style={{ width: "190px", height: "190px" }}
-          onClick={() => handleClick(item)}
-          alt=""
-        />
-      )),
-    },
-    {
-      id: 4,
-      imgMain: mainImage.src,
-      styles: { width: "400px", height: "400px", borderRadius: "10%" },
-      imgSmall: smallImages.map(item => (
-        <img
-          key={item.id}
-          src={item.src}
-          style={{ width: "190px", height: "190px" }}
-          onClick={() => handleClick(item)}
-          alt=""
-        />
-      )),
-    },
-    {
-      id: 5,
-      imgMain: mainImage.src,
-      styles: { width: "400px", height: "400px", borderRadius: "10%" },
-      imgSmall: smallImages.map(item => (
-        <img
-          key={item.id}
-          src={item.src}
-          style={{ width: "190px", height: "190px" }}
-          onClick={() => handleClick(item)}
-          alt=""
-        />
-      )),
-    },
-    {
-      id: 6,
-      imgMain: mainImage.src,
-      styles: { width: "400px", height: "400px", borderRadius: "10%" },
-      imgSmall: smallImages.map(item => (
-        <img
-          key={item.id}
-          src={item.src}
-          style={{ width: "190px", height: "190px" }}
-          onClick={() => handleClick(item)}
-          alt=""
+          alt="photos"
         />
       )),
     },

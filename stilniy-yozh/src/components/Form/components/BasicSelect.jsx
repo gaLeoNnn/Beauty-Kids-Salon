@@ -4,7 +4,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 
-export default function BasicSelect() {
+export default function BasicSelect({ onChange, value }) {
   // const classes = useStyles;
 
   const services = [
@@ -17,22 +17,16 @@ export default function BasicSelect() {
     { id: 7, value: "3Д косы с канекалоном" },
   ];
 
-  const [service, setService] = React.useState("");
-
-  const handleChange = (event) => {
-    setService(event.target.value);
-  };
-
   return (
     <Select
       size="small"
       sx={{ marginBottom: "20px" }}
       id="demo-simple-select"
-      value={service}
+      value={value}
       name="service"
-      onChange={handleChange}
+      onChange={onChange}
     >
-      {services.map((item) => {
+      {services.map(item => {
         return (
           <MenuItem key={item.id} value={item.value}>
             {item.value}
