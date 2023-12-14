@@ -49,6 +49,7 @@
   margin-top: -50px;
 }
 .services__content {
+  position: relative;
   width: calc(4 * var(--card-width) + 3 * 20px);
   display: flex;
   gap: 20px;
@@ -56,15 +57,6 @@
   animation-fill-mode: forwards;
   /* justify-content: space-between; */
   /* flex-wrap: wrap; */
-}
-
-@keyframes contentStandart {
-  0% {
-    width: calc(100px + 4 * var(--card-width) + 3 * 20px);
-  }
-  100% {
-    width: calc(4000px * var(--card-width) + 3 * 20px);
-  }
 }
 
 .services__order {

@@ -98,11 +98,9 @@ hr {
 
 :root {
   --card-width: 300px;
-  --card-big-image-width: 200px;
-  --fade-in-animation: fade-in 400ms linear;
+  --card-big-image-width: 250px;
+  --fade-in-animation: fade-in 500ms linear;
   --fade-out-animation: fade-out 200ms linear;
-  --scale-in-animation: scale-in 400ms linear;
-  --scale-out-animation: scale-out 200ms linear;
 }
 
 .services__content.has-active {
@@ -111,23 +109,38 @@ hr {
 }
 
 .card__container {
+  display: flex;
   border: 1px solid #cbcbcb;
   background-color: #ffffff;
+  width: var(--card-width);
   border-radius: 10px;
   cursor: pointer;
-  height: 430px;
+  height: 530px;
   position: relative;
 }
 
-.card__container.card_container_deactive {
-  animation: card-deactivate 300ms linear;
-  animation-fill-mode: forwards;
+.card__container:hover {
+  background-color: #ede6e6;
 }
-
-.card__container.card_container_active {
-  display: flex;
+/* .card__box {
+  border: 1px solid #000;
+  width: 200px;
   animation: card-activate 300ms linear;
   animation-fill-mode: forwards;
+} */
+
+/* .card__container.card_container_deactive {
+  animation: card-deactivate 300ms linear;
+  animation-fill-mode: forwards;
+} */
+
+.card__container.card_container_active {
+  animation: card-activate 300ms linear;
+  animation-fill-mode: forwards;
+  position: absolute;
+  z-index: 1;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 .card__img {
@@ -143,29 +156,37 @@ hr {
   border-radius: 10px;
   height: 200px;
   width: var(--card-width);
-  animation: var(--scale-in-animation);
+  animation: var(--fade-in-animation);
   animation-fill-mode: forwards;
 }
 
 .card__container.card_container_active .card__image_small {
-  animation: var(--scale-out-animation);
+  animation: var(--fade-out-animation);
   animation-fill-mode: forwards;
 }
 
 .card__container .card__image_big {
-  animation: var(--scale-out-animation);
+  /* display: none; */
+  animation: var(--fade-out-animation);
   animation-fill-mode: forwards;
 }
 
 .card__container.card_container_active .card__image_big {
-  animation: var(--scale-in-animation);
+  /* display: block; */
+  animation: var(--fade-in-animation);
   animation-fill-mode: forwards;
   border-radius: 10px;
-  height: 300px;
+  height: 350px;
+  width: 80%;
   width: var(--card-big-image-width);
 }
 
 .card__container h3 {
+  font-family: "Lilita One Rus";
+  text-align: center;
+
+  font-size: 25px;
+  color: #52525b;
   text-align: center;
 }
 
@@ -179,13 +200,16 @@ hr {
 
 .card__summary {
   padding: 0 16px;
-  border: 1px solid #000;
+  color: #52525b;
+  font-size: 17px;
 }
 
 .card__description {
-  animation: var(--fade-out-animation);
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+  /* animation: var(--fade-out-animation);
+  animation-delay: 500ms;
+  animation-fill-mode: forwards; */
+  color: #52525b;
+  font-size: 17px;
 }
 
 .card__container.card_container_active .card__summary {
@@ -196,7 +220,12 @@ hr {
 .card__container.card_container_active .card__description {
   padding: 0 16px;
   animation: var(--fade-in-animation);
-  animation-delay: 1s;
+  /* animation-delay: 1s; */
+  animation-fill-mode: forwards;
+}
+
+.card__container.card_container_deactive .card__description {
+  animation: var(--fade-out-animation);
   animation-fill-mode: forwards;
 }
 
@@ -219,6 +248,8 @@ hr {
 }
 
 .card__container .price-options li {
+  color: #52525b;
+  font-size: 15px;
   list-style-type: none;
 }
 
@@ -261,16 +292,17 @@ hr {
     width: var(--card-width);
   }
   100% {
-    border: 1px solid #000;
-    width: calc(var(--card-width) + 200px);
+    width: calc(var(--card-width) + 320px);
   }
 }
 
 @keyframes card-deactivate {
   0% {
-    width: calc(var(--card-width) + 200px);
+    width: calc(var(--card-width) + 400px);
   }
-
+  50% {
+    width: calc(var(--card-width) + 50px);
+  }
   100% {
     width: var(--card-width);
   }
@@ -282,30 +314,30 @@ hr {
     opacity: 0;
   }
   1% {
-    display: block;
   }
+
   100% {
     display: block;
     opacity: 1;
   }
 }
+
 @keyframes fade-out {
   0% {
     display: block;
     opacity: 1;
   }
-  99% {
-    display: block;
-  }
+
   100% {
     display: none;
     opacity: 0;
   }
 }
-
+/* 
 @keyframes scale-in {
   0% {
     display: none;
+    opacity: 0;
     scale: 0;
   }
   50% {
@@ -313,10 +345,11 @@ hr {
   }
   100% {
     display: block;
+    opacity: 1;
     scale: 1;
   }
-}
-@keyframes scale-out {
+} */
+/* @keyframes scale-out {
   0% {
     display: block;
     scale: 1;
@@ -328,4 +361,4 @@ hr {
     display: none;
     scale: 0;
   }
-}
+} */
