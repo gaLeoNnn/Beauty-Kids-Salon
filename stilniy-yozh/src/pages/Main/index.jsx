@@ -1,16 +1,12 @@
 import { useState, useEffect } from "react";
-import "./Main.css";
+import "./Style.css";
 import Children from "../../components/Children";
 import Reviews from "../../components/Reviews";
 import Footer from "../../components/Footer";
 import Form from "../../components/Form";
-import { ImgLoader, SvgImporter } from "../../images/ImgLoader";
+import { ImgLoader, SvgImporter } from "../../assets/images/ImgLoader";
 
 const Main = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const [reviews, setReviews] = useState([
     {
       id: 0,
@@ -38,6 +34,10 @@ const Main = () => {
         "Мы очень любим эту детскую парикмахерскую! Наши дети всегда получают отличный сервис и красивые стрижки. Парикмахеры всегда улыбаются и терпеливо работают с детьми. Я бы определенно рекомендовала эту парикмахерскую.",
     },
   ]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

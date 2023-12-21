@@ -1,10 +1,10 @@
 import Form from "../../components/Form";
-import "./Services.css";
+import "./Style.css";
 import { useEffect, useState } from "react";
-// import { Tabs } from "./Card";
+
 import Footer from "../../components/Footer";
 import { piers } from "../../components/Piers";
-import { ImgLoader } from "../../images/ImgLoader";
+import { ImgLoader } from "../../assets/images/ImgLoader";
 import { getCardData } from "../../components/Piers";
 import classNames from "classnames";
 import Card from "./Card";
@@ -46,11 +46,6 @@ const Services = () => {
                 <Card {...enrichedItem} />
               ))}
           </div>
-          {/* <div className="services__content">
-            {piers.map(item => (
-              <Tabs piers={item} list={item.list} key={item.id} />
-            ))}
-          </div> */}
           <ImgLoader name={"footprint"} classNames="services__footprint" />
         </div>
         <div className="services__order">

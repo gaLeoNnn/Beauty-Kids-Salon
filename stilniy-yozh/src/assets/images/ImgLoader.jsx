@@ -542,6 +542,7 @@ const HEADER = (
     />
   </svg>
 );
+
 export const SvgImporter = {
   GIFT,
   DIMOND,

@@ -1,23 +1,22 @@
 import { useEffect, useState } from "react";
-import "./Catalog.css";
+import "./Style.css";
 import { Carousel } from "../../components/Carousel";
 import Form from "../../components/Form";
 import Footer from "../../components/Footer";
-import { ImgLoader } from "../../images/ImgLoader";
-import footerHeadPurple from "../../images/img/catalog_head.svg";
+import { ImgLoader } from "../../assets/images/ImgLoader";
 
-import img_1 from "../../components/Carousel/foto/1.png";
-import img_2 from "../../components/Carousel/foto/2.png";
-import img_3 from "../../components/Carousel/foto/3.png";
-import img_4 from "../../components/Carousel/foto/4.png";
-import img_5 from "../../components/Carousel/foto/5.png";
-import img_6 from "../../components/Carousel/foto/6.png";
-import img1 from "../../components/Carousel/fotomen/1.png";
-import img2 from "../../components/Carousel/fotomen/2.jpg";
-import img3 from "../../components/Carousel/fotomen/3.jpg";
-import img4 from "../../components/Carousel/fotomen/4.jpg";
-import img5 from "../../components/Carousel/fotomen/5.jpeg";
-import img6 from "../../components/Carousel/fotomen/6.jpeg";
+import img_1 from "../../assets/images/carousel/foto/1.png";
+import img_2 from "../../assets/images/carousel/foto/2.png";
+import img_3 from "../../assets/images/carousel/foto/3.png";
+import img_4 from "../../assets/images/carousel/foto/4.png";
+import img_5 from "../../assets/images/carousel/foto/5.png";
+import img_6 from "../../assets/images/carousel/foto/6.png";
+import img1 from "../../assets/images/carousel/fotomen/1.png";
+import img2 from "../../assets/images/carousel/fotomen/2.jpg";
+import img3 from "../../assets/images/carousel/fotomen/3.jpg";
+import img4 from "../../assets/images/carousel/fotomen/4.jpg";
+import img5 from "../../assets/images/carousel/fotomen/5.jpeg";
+import img6 from "../../assets/images/carousel/fotomen/6.jpeg";
 
 const Catalog = () => {
   useEffect(() => {

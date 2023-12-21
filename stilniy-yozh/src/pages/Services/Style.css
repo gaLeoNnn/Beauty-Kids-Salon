@@ -60,7 +60,7 @@
 }
 
 .services__order {
-  background-image: url("../../images/img/services-bg.png");
+  background-image: url("../../assets/images/img/services-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 1200px;

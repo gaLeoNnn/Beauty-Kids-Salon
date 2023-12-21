@@ -1,3 +1,17 @@
+.reviews {
+  background-image: url("../../assets/images/img/bg4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 823px;
+  margin-top: -390px;
+}
+.title__reviews {
+  padding-top: 100px;
+}
+.reviews__spray {
+  margin-top: -40px;
+}
+
 .swiper {
   max-width: 1080px;
   /* border: 1px solid #000; */
@@ -14,7 +28,7 @@
   color: #ffffff;
 }
 .swiper-button-next {
-  background-image: url(../../images/img/right.svg);
+  background-image: url(../../assets/images/img/right.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
@@ -31,7 +45,7 @@
   box-shadow: 3px 3px 10px rgb(144, 98, 8);
 }
 .swiper-button-prev {
-  background-image: url(../../images/img/left.png);
+  background-image: url(../../assets/images/img/left.png);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;

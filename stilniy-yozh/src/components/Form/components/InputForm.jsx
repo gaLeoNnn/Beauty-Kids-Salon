@@ -1,21 +1,19 @@
 import TextField from "@mui/material/TextField";
 
-function InputForm(props) {
-  // const classes = useStyles();
-
+function InputForm({ label, type, placeholder, id, value, defaultValue, name, onChange, pattern }) {
   return (
     <>
-      <label className="feed-form__name">{props.label}</label>
+      <label className="feed-form__name">{label}</label>
       <TextField
-        type={props.type}
-        placeholder={props.placeholder}
-        id={props.id}
-        value={props.value}
-        defaultValue={props.defaultValue}
-        name={props.name}
-        onChange={props.onChange}
+        type={type}
+        placeholder={placeholder}
+        id={id}
+        value={value}
+        defaultValue={defaultValue}
+        name={name}
+        onChange={onChange}
         size="small"
-        pattern={props.pattern}
+        pattern={pattern}
         sx={{ marginBottom: "20px", height: "34px" }}
       ></TextField>
     </>

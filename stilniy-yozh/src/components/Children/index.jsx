@@ -1,9 +1,8 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Children.css";
-import "./Swiper.css";
-import { ImgLoader } from "../../images/ImgLoader";
+import "./Style.css";
+import { ImgLoader } from "../../assets/images/ImgLoader";
 
 function Children() {
   const hairs = ["HAIR", "HAIR2", "HAIR3", "HAIR4", "HAIR5"];

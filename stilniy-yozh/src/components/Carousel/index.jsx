@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Carousel.css";
+import "./Style.css";
 import { useEffect } from "react";
 
 export const Carousel = ({ photos }) => {

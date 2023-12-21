@@ -1,7 +1,7 @@
 /* @import "./Swaiper.css"; */
 
 .children {
-  background-image: url("../../images/img/bg2.png");
+  background-image: url("../../assets/images/img/bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 1100px;
@@ -28,4 +28,7 @@
   margin-left: auto;
   padding-right: 150px;
   margin-top: 100px;
+}
+.children .slick-slide {
+  width: 250px !important;
 }

@@ -1,12 +1,13 @@
-import "./Footer.css";
+import "./Style.css";
 import Studio from "./components/Studio";
 import FooterServices from "./components/Serveices";
 import Adress from "./components/Adress";
-import { ImgLoader } from "../../images/ImgLoader";
+import { ImgLoader } from "../../assets/images/ImgLoader";
 
-const Footer = (props) => {
+const Footer = props => {
   const { color, image, colorFooter } = props;
-  const logo = image ? image : "";
+
+  const logo = image || "";
 
   return (
     <footer style={{ backgroundColor: color }}>

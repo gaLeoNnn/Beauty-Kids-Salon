@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Form.css";
+import "./Style.css";
 import InputForm from "./components/InputForm";
 import BasicSelect from "./components/BasicSelect";
 

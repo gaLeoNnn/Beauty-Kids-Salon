@@ -1,20 +1,22 @@
-import "./Header.css";
+import "./Style.css";
 import Navbar from "./components/Navbar";
-import { ImgLoader } from "../../images/ImgLoader";
-import { useState } from "react";
+import { ImgLoader } from "../../assets/images/ImgLoader";
+import { useEffect, useState } from "react";
 import Form from "./components/ModalMain";
 
 const Header = () => {
   const [showMode, setShowMode] = useState(false);
   const handleClick = () => setShowMode(!showMode);
 
-  if (showMode) {
-    document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = "15px";
-  } else {
-    document.body.style.overflow = "";
-    document.body.style.paddingRight = "";
-  }
+  useEffect(() => {
+    if (showMode) {
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "15px";
+    } else {
+      document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
+    }
+  }, [showMode]);
 
   return (
     <>
@@ -27,9 +29,7 @@ const Header = () => {
         </div>
       </header>
       <div className={`overlay ${showMode ? "show" : ""}`}>
-        {showMode ? (
-          <Form handleClick={handleClick} showMode={showMode} />
-        ) : null}
+        {showMode ? <Form handleClick={handleClick} showMode={showMode} /> : null}
       </div>
     </>
   );

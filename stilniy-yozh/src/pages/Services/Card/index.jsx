@@ -1,6 +1,5 @@
-import { useState } from "react";
-import "./Tabs.css";
-import { ImgLoader } from "../../../images/ImgLoader";
+import "./Style.css";
+import { ImgLoader } from "../../../assets/images/ImgLoader";
 import PriceOptions from "./priceOptions";
 import classNames from "classnames";
 

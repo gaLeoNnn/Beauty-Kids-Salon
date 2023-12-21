@@ -91,7 +91,7 @@ span {
   color: #ca6b1b;
 }
 .feed-form__prof::before {
-  content: url("../../images/icons/tick.png");
+  content: url("../../assets/images/icons/tick.png");
   position: absolute;
   left: -20px;
 }

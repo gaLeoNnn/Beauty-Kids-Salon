@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Feedback.css";
+import "./Style.css";
 
 const Feedback = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -18,10 +18,10 @@ const Feedback = () => {
         feedback: textInput.current.value,
       })
 
-      .then((res) => {
+      .then(res => {
         console.log(res);
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Error:", error);
       });
     nameInput.current.value = "";
@@ -38,41 +38,23 @@ const Feedback = () => {
       <div className="container">
         <h3 className="feedback__title">Отзывы</h3>
         <div className="feedback__text">
-          Дорогие клиенты, мы будем рады вашим отзывам! Что вам понравилось? А
-          что не очень? Какие замечания и/или пожелания есть у вас к нашей
-          работе? Вы придете к нам снова и будете рекомендовать «Стильный еж»
-          своим друзьям и знакомым?
+          Дорогие клиенты, мы будем рады вашим отзывам! Что вам понравилось? А что не очень? Какие замечания и/или
+          пожелания есть у вас к нашей работе? Вы придете к нам снова и будете рекомендовать «Стильный еж» своим друзьям
+          и знакомым?
         </div>
         <div className="feedback__field field">
           <div className="feedback__from">
             <div className="field__text">Оставьте свой отзыв</div>
             <div className="feedback__item">
-              <label className="feed-form__name feed-form__name_m">
-                Ваше имя
-              </label>
-              <input
-                ref={nameInput}
-                type="text"
-                placeholder="Имя"
-                name="name"
-              />
+              <label className="feed-form__name feed-form__name_m">Ваше имя</label>
+              <input ref={nameInput} type="text" placeholder="Имя" name="name" />
             </div>
             <div className="feedback__item">
-              <label className="feed-form__phone feed-form__name_m">
-                Телефон
-              </label>
-              <input
-                ref={phoneInput}
-                required
-                type="text"
-                placeholder="Телефон"
-                name="phone"
-              />
+              <label className="feed-form__phone feed-form__name_m">Телефон</label>
+              <input ref={phoneInput} required type="text" placeholder="Телефон" name="phone" />
             </div>
             <div className="feedback__item">
-              <label className="feed-form__phone feed-form__name_m">
-                Текст отзыва
-              </label>
+              <label className="feed-form__phone feed-form__name_m">Текст отзыва</label>
               <textarea
                 ref={textInput}
                 className="feed-form__area"
