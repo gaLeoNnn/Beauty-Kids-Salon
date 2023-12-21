@@ -1,11 +1,9 @@
 import Form from "../../components/Form";
 import "./Style.css";
 import { useEffect, useState } from "react";
-
 import Footer from "../../components/Footer";
-import { piers } from "../../components/Piers";
 import { ImgLoader } from "../../assets/images/ImgLoader";
-import { getCardData } from "../../components/Piers";
+import { getCardData } from "../../data/index";
 import classNames from "classnames";
 import Card from "./Card";
 
